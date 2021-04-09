@@ -10,7 +10,6 @@
     color: white;
 }
 #taste {
-
     cursor: pointer;
     padding: 0;
 }
@@ -32,16 +31,24 @@
   transition: 0.5s;
   opacity: 1;
 }
+#taste :hover + p{
+    transition: 0.5s;
+    opacity: 1;
+  }
 #taste p{
     color: #222;
-    -webkit-text-stroke:2px #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: calc(10px + 7vmin);
+    font-size: 15vmin;
     position: absolute;
     text-align: center;
-    top: 80%;
-    left: 30%;
+    top: 32%;
+    left: -22%;
+    opacity: 0.7;
+    transform: rotateZ(90deg);
     transition: 0.5s;
+}
+.items{
+    background-color: aliceblue;
 }
 .App {
     background-color: #F4A92D;
@@ -51,7 +58,7 @@
 .App-logo {
     height: 10vw;
     pointer-events: none;
-    margin:20vh 40vw;
+    margin:20vh 33vw;
 }
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {

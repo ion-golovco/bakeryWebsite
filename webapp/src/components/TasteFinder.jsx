@@ -3,7 +3,7 @@ import { Container, Row, Col, Collapse, Card } from "reactstrap";
 import items from "./Items";
 
 const Items = items;
-const waitTime = 200;
+const waitTime = 2000;
 class TasteFinder extends Component {
     state = {
         page: -1,
@@ -19,15 +19,15 @@ class TasteFinder extends Component {
     };
     render() {
         return (
-            <Container fluid={true}>
+            <Container >
                 <Row>
                     <Collapse isOpen={this.state.isOpen1}>
-                        <Col sm={{ size: "8", offset: 2 }}>
+                        <Col sm={{ size: "10", offset: 1 }}>
                             <Row>
                                 <Col xs="6" id="taste">
                                     <img
                                         onClick={() => {
-                                            this.setState({ isOpen1: false, page: 0 });
+                                            setTimeout(() => {this.setState({ isOpen1: false, page: 0 });},200);
                                             setTimeout(() => {
                                                 this.timer();
                                             }, waitTime);
@@ -41,7 +41,7 @@ class TasteFinder extends Component {
                                 <Col xs="6" id="taste">
                                     <img
                                         onClick={() => {
-                                            this.setState({ isOpen1: false, page: 1 });
+                                            setTimeout(() => {this.setState({ isOpen1: false, page: 1 });},200);
                                             setTimeout(() => {
                                                 this.timer();
                                             }, waitTime);
@@ -67,11 +67,13 @@ class TasteFinder extends Component {
                         </Col>
                     </Collapse>
                     <Collapse isOpen={this.state.isOpen2}>
+                        <Container>
                         <Row>
-                            <Col>
-                                <Container>{Items.map((n) => this.cardMaker(n))}</Container>
+                            <Col xs='12'>
+                                <Container className="items">{Items.map((n) => this.cardMaker(n))}</Container>
                             </Col>
                         </Row>
+                        </Container>
                     </Collapse>
                 </Row>
             </Container>
