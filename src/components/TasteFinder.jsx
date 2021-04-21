@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Collapse, Card, Jumbotron } from "reactstrap";
+import { Container, Row, Col, Collapse, } from "reactstrap";
 import items from "./Items";
 
 const Items = items;
