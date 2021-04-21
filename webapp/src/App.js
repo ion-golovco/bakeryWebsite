@@ -9,8 +9,11 @@ function App() {
     
     return (
         <div className="App">
-            <TasteFinder />
             <Navigation />
+            <TasteFinder />
+            
+            <div id="shopTop" alt=""/>
+               
         </div>
     );
 }
